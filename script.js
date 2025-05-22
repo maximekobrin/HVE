@@ -37,3 +37,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Confirmation d’envoi de message
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const confirmation = document.getElementById("confirmation-message");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Empêche le vrai envoi
+
+    // Affiche le message
+    confirmation.classList.add("visible");
+
+    // Réinitialise le formulaire
+    form.reset();
+
+    // Masque le message après 5 secondes
+    setTimeout(() => {
+      confirmation.classList.remove("visible");
+    }, 5000);
+  });
+});

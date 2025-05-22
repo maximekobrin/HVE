@@ -178,3 +178,17 @@ section.content.appear {
   }
 }
 
+#confirmation-message {
+  margin-top: 100px;
+  padding: 15px;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 50px;
+  border-left: 50px solid #28a745;
+  font-weight: bold;
+  display: none;
+}
+
+#confirmation-message.visible {
+  display: block;
+}
