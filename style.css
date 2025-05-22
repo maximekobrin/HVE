@@ -179,8 +179,8 @@ section.content.appear {
 }
 
 #confirmation-message {
-  margin-top: 100px;
-  padding: 15px;
+  margin-top: 50px;
+  padding: 1px;
   background-color: #d4edda;
   color: #155724;
   border-radius: 50px;
