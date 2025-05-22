@@ -1,0 +1,180 @@
+/* STYLE CSS MODERNE POUR HVE */
+
+:root {
+  --primary: #2e7d32;
+  --secondary: #66bb6a;
+  --bg: #f5f9f6;
+  --text: #333;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  padding: 0;
+  margin: 1em 0 0 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #c8facc;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("image/campagne.jpeg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 4em 1em;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.btn {
+  background-color: var(--secondary);
+  color: white;
+  padding: 0.7em 1.4em;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #338a3e;
+}
+
+main {
+  padding: 2em;
+}
+
+section.content {
+  max-width: 800px;
+  margin: auto;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.6em;
+  margin-top: 0.3em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.7em 1.2em;
+  border: none;
+  border-radius: 6px;
+  margin-top: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #1b5e20;
+}
+
+.article-card {
+  background: white;
+  padding: 1.5em;
+  margin: 1.2em 0;
+  border-left: 5px solid var(--secondary);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px) }
+  to { opacity: 1; transform: translateY(0) }
+}
+
+section.content.appear {
+  opacity: 1;
+}
+
+.apropos-container {
+  max-width: 1000px;
+  margin: 3em auto;
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.info-bulle {
+  background-color: white;
+  border-left: 6px solid var(--secondary);
+  border-radius: 12px;
+  padding: 2em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.info-bulle:hover {
+  transform: translateY(-5px);
+}
+
+.info-bulle h2 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
