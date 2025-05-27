@@ -1,3 +1,5 @@
+/* Blog */ 
+
 // Script pour afficher dynamiquement des articles sur blog.html
 document.addEventListener("DOMContentLoaded", function () {
   const articles = [
@@ -58,3 +60,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
   });
 });
+
+
+
+
+
+/* Acceuil */ 
+function animateCounter(id, endValue) {
+  let counter = 0;
+  const speed = 20;
+  const el = document.getElementById(id);
+  const update = () => {
+    if (counter < endValue) {
+      counter += Math.ceil(endValue / 100);
+      el.textContent = counter;
+      setTimeout(update, speed);
+    } else {
+      el.textContent = endValue;
+    }
+  };
+  update();
+}
+animateCounter("compteur-hve", 39772);
