@@ -285,3 +285,242 @@ h2 {
     transform: translateY(0);
   }
 }
+
+/* Avantage */
+
+.avantages-section {
+  max-width: 1100px;
+  margin: 4em auto;
+  padding: 0 2em;
+  text-align: center;
+}
+
+.avantages-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2em;
+  color: var(--primary);
+}
+
+.avantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+}
+
+.avantage-carte {
+  background-color: #fff;
+  border-radius: 1.5em;
+  padding: 2em;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.avantage-carte:hover {
+  transform: translateY(-6px);
+}
+
+.avantage-carte .emoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.avantage-carte h3 {
+  font-size: 1.3rem;
+  color: var(--secondary);
+  margin-bottom: 0.5em;
+}
+
+.avantage-carte p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* certification */
+
+
+.certif-section {
+  max-width: 1100px;
+  margin: 4em auto;
+  padding: 0 2em;
+  text-align: center;
+}
+
+.certif-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2em;
+  color: var(--primary);
+}
+
+.etapes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+}
+
+.etape-carte {
+  background-color: #ffffff;
+  border-radius: 1.5em;
+  padding: 2em;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.etape-carte:hover {
+  transform: translateY(-6px);
+}
+
+.etape-carte .emoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.etape-carte h3 {
+  font-size: 1.3rem;
+  color: var(--secondary);
+  margin-bottom: 0.5em;
+}
+
+.etape-carte p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.certif-note {
+  margin-top: 3em;
+  background-color: #f1fdf4;
+  padding: 1.5em;
+  border-left: 6px solid var(--secondary);
+  border-radius: 1em;
+  font-size: 1.1rem;
+  color: #2d512d;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.liens-complementaires {
+  margin-top: 3em;
+  text-align: left;
+  background-color: #f9f9f9;
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.liens-complementaires h4 {
+  margin-bottom: 1em;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.liens-complementaires ul {
+  list-style: none;
+  padding: 0;
+}
+
+.liens-complementaires li {
+  margin-bottom: 1em;
+}
+
+.liens-complementaires a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.liens-complementaires a:hover {
+  color: #2c3e50;
+}
+
+
+/* Formulaire contacte */
+
+.contact-container {
+  max-width: 600px;
+  margin: 4em auto;
+  padding: 2em;
+  background: #fdfdfd;
+  border-radius: 1.5em;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.3em;
+}
+
+input, textarea {
+  padding: 0.9em 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.8em;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(100, 200, 150, 0.2);
+}
+
+.btn-submit {
+  padding: 0.9em;
+  border: none;
+  border-radius: 1em;
+  background: var(--secondary);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #278347;
+}
+
+#confirmation-message {
+  margin-top: 2em;
+  padding: 1em;
+  background-color: #e6ffed;
+  color: #216e39;
+  border-left: 5px solid #27ae60;
+  border-radius: 1em;
+  font-weight: 500;
+  display: none;
+}
+
+#confirmation-message.visible {
+  display: block;
+}
