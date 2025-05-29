@@ -551,3 +551,56 @@ textarea:focus {
   color: #247844;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
+
+/* intro */
+.intro {
+  background-color: #f5fff9;
+  padding: 4em 2em;
+  text-align: center;
+  color: #2f5f3e;
+  border-top: 2px solid #c9eacc;
+  border-bottom: 2px solid #c9eacc;
+}
+
+.intro h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #207f57;
+  font-weight: 600;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.6;
+}
+
+.compteur-container {
+  margin-top: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: #e0f8e9;
+  padding: 1rem 2rem;
+  border-radius: 1em;
+  box-shadow: 0 0 15px rgba(32, 127, 87, 0.2);
+}
+
+.compteur-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2a6d48;
+  margin: 0;
+  text-align: center;
+}
+
+.compteur-valeur {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a5e38;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+

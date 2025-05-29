@@ -66,19 +66,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* Acceuil */ 
-function animateCounter(id, endValue) {
-  let counter = 0;
-  const speed = 20;
-  const el = document.getElementById(id);
-  const update = () => {
-    if (counter < endValue) {
-      counter += Math.ceil(endValue / 100);
-      el.textContent = counter;
-      setTimeout(update, speed);
-    } else {
-      el.textContent = endValue;
+
+  const compteurEl = document.getElementById("compteur-hve");
+  const sectionIntro = document.getElementById("section-intro");
+  let aDejaAnime = false;
+
+  function animeCompteur() {
+    const cible = 39772;
+    let compteur = 0;
+
+    function incrementer() {
+      const incrément = Math.ceil((cible - compteur) / 12);
+      if (compteur < cible) {
+        compteur += incrément;
+        compteurEl.textContent = compteur;
+        setTimeout(incrementer, 30);
+      } else {
+        compteurEl.textContent = cible;
+      }
     }
-  };
-  update();
-}
-animateCounter("compteur-hve", 39772);
+
+    incrementer();
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !aDejaAnime) {
+        animeCompteur();
+        aDejaAnime = true;
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  observer.observe(sectionIntro);
+
+
