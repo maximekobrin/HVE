@@ -102,4 +102,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observer.observe(sectionIntro);
 
+/* Message contacte*/
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+    const confirmation = document.getElementById("confirmation-message");
 
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Empêche l'envoi réel
+
+      // Affiche le message de confirmation
+      confirmation.classList.add("visible");
+
+      // Vide le formulaire
+      form.reset();
+
+      // Masque le message après 5 secondes
+      setTimeout(() => {
+        confirmation.classList.remove("visible");
+      }, 5000);
+    });
+  });
